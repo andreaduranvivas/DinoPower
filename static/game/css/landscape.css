@@ -17,7 +17,6 @@ body {
 .buttonNew {
     background-color: #aa1414;
     color: #fff;
-    font-family: "Old English Text MT";
     font-size: 30px;
     padding: 10px 20px;
     border-radius: 50px;
@@ -46,7 +45,6 @@ body {
 
     font-weight: 400;
     text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.51);
-    font-family: "Old English Text MT";
 }
 
 #player-number{
@@ -55,7 +53,6 @@ body {
     right: 0;
     text-align-last: center;
     font-size: 1.5em;
-    font-family: "Old English Text M";
     color: #fff;
     background-color: #000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
