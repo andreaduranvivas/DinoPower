@@ -1,0 +1,17 @@
+#gameOver{
+    position: absolute;
+    top: 135%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25em;
+    height: 12em;
+    background-size: contain;
+    z-index: 3;
+    background-position: center;
+    pointer-events: none;
+    background-image: url("/static/game/img/gameOver.jpg");
+}
+
+.pause-animations * {
+    animation-play-state: paused !important;
+}

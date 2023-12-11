@@ -1,0 +1,120 @@
+:root
+{
+    --cactus1: url(/static/game/img/cactus1.png) repeat-x 0px 0px;
+    --cactus2: url(/static/game/img/cactus2.png) repeat-x 0px 0px;
+    --cactus3: url(/static/game/img/cactus3.png) repeat-x 0px 0px;
+    --cactus4: url(/static/game/img/cactus4.png) repeat-x 0px 0px;
+    --cactus5: url(/static/game/img/cactus5.png) repeat-x 0px 0px;
+    --cactus6: url(/static/game/img/cactus6.png) repeat-x 0px 0px;
+    --bird1: url(/static/game/img/ave1.png) repeat-x 0px 0px;
+    --bird2: url(/static/game/img/ave2.png) repeat-x 0px 0px;
+}
+
+.cactus
+{
+    display: inline;
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    bottom: 10%;
+    left: 100%;
+    
+    background-size: cover;
+}
+
+#cactus1{
+    background: var(--cactus1);
+}
+
+#cactus2
+{
+    background: var(--cactus2);
+}
+
+#cactus3{
+    background: var(--cactus3);
+}
+
+#cactus4
+{
+    background: var(--cactus4);
+}
+
+#cactus5{
+    background: var(--cactus5);
+}
+
+#cactus6
+{
+    background: var(--cactus6);
+}
+
+
+#bird
+{
+    display: inline;
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    bottom: 60%;
+    left: 100%;
+    right: 1px;
+    background: var(--bird1);
+    background-size: cover;
+    
+    
+}
+
+.cactus-movement{
+    animation: cactusMovement 3s linear infinite;
+}
+
+.bird-movement{
+    animation: birdMovement 3s linear infinite;
+}
+
+.bird-fly{
+    animation: birdFly 0.5s linear infinite;
+}
+
+
+
+
+@keyframes cactusMovement{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-3500%);
+    }
+}
+
+@keyframes birdMovement {
+    0% {
+        transform: translateX(0);
+        background: var(--bird1);
+        background-size: cover;
+    }
+    
+    100% {
+        background: var(--bird2);
+        background-size: cover;
+        width: 70px;
+        height: 78px;
+        transform: translateX(-3500%)
+    }
+    
+}
+
+@keyframes birdFly {
+    0%, 100% {
+        background: var(--bird1);
+        background-size: cover;
+    }
+    50% {
+        background: var(--bird2);
+        background-size: cover;
+        width: 70px;
+        height: 78px;
+    }
+}

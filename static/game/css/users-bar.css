@@ -1,0 +1,187 @@
+:root
+{
+    --standing-dino: url(/static/game/img/standing_dino.png) repeat-x 0px 0px;
+    --dead-dino: url(/static/game/img/dead_dino.png) repeat-x 0px 0px;
+    --ground: url(/static/game/img/fondo2.png) repeat-x 0px 0px;
+    --walking_dino_1:url(/static/game/img/walking_titan_1.png) repeat-x 0px 0px;
+    --walking_dino_2:url(/static/game/img/walking_titan_2.png) repeat-x 0px 0px;
+    --crouching_dino_1:url(/static/game/img/crouching_titan_1.png) repeat-x 0px 0px;
+    --crouching_dino_2:url(/static/game/img/crouching_titan_2.png) repeat-x 0px 0px;
+}
+
+#other-players
+{
+    display: inline;
+    width: 96%;
+    height: 6%;
+    position: fixed;
+    bottom: 2%;
+    left: 2%; 
+
+    
+}
+
+.dino-container
+{
+    display: flex;
+    flex-direction: column;
+    width: 100px; /* Redefine el ancho del contenedor */
+    height: 100px; /* Redefine el alto del contenedor */
+
+    position: relative;
+    bottom: 100%;
+    left: var(--i);
+    float: left;
+}
+
+.player-number
+{
+    margin: 0px;
+    margin-top: 0px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+
+}
+
+.dino 
+{
+    width: 100%;
+    height: 50%; 
+
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+ 
+    background: var(--walking_dino_1);
+    background-size: cover;
+    
+}
+
+#player{
+    width: 120px;
+    height: 70px; 
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    background: var(--walking_dino_1);
+    background-size: cover;
+
+}
+
+
+.its-me
+{
+    font-weight: bold;
+    font-size: 35px;
+
+}
+.its-me > p
+{
+    top: -10%;
+    
+}
+
+.dino-jumping{
+    animation: dinoJumping 1s ease-out;
+}
+
+.dino-running
+{
+    animation: animarDino 0.25s steps(2) infinite;
+}
+
+.titan-running
+{
+    animation: animarTitan 0.25s steps(2) infinite;
+}
+
+.dino-crouching
+{
+    animation: animarDinoAgachado 0.25s steps(2) infinite;
+}
+
+.dino-crash 
+{
+    background-position-x: -252px;
+}
+.dino-dead 
+{
+    transition: 2s;
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+
+}
+.dino-dead > span
+{
+    transition: 2s;
+    background: var(--walking_dino_1);
+    background-size: cover;
+    filter: invert(16%) sepia(78%) hue-rotate(-50deg) saturate(1500%);
+    animation: none;
+}
+
+
+#ground
+{
+    width: 200%;
+    height: 150%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: var(--ground);
+    background-size: 50% 60px;
+}
+
+
+
+@keyframes animarDino{
+    from{
+        background: var(--walking_dino_1);
+        background-size: cover;
+    }
+    to{
+        background: var(--walking_dino_2);
+        background-size: cover;
+    }
+}
+
+@keyframes animarTitan{
+    from{
+        background: var(--walking_dino_1);
+        background-size: cover;
+    }
+    to{
+        background: var(--walking_dino_2);
+        background-size: cover;
+    }
+}
+
+@keyframes dinoJumping{
+    0% {
+        bottom: 20px;
+    }
+    35%, 55% {
+        bottom: 160px; }
+}
+
+@keyframes animarDinoAgachado{
+    from{
+        background: var(--crouching_dino_1);
+        background-size: cover;
+        width: 90px;
+        height: 60px;
+    }
+    to{
+        background: var(--crouching_dino_2);
+        background-size: cover;
+        width: 90px;
+        height: 60px;
+    }
+}
+ 
+.no-animation {
+    animation: none !important;
+  }

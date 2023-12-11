@@ -1,0 +1,63 @@
+body {
+    background: url('/static/game/img/paisaje.png') repeat-x center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#contentLandscape {
+    position: relative;
+    z-index: 1; /* Colocar el contenido sobre el fondo */
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.buttonNew {
+    background-color: #aa1414;
+    color: #fff;
+    font-family: "Old English Text MT";
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.buttonNew:hover {
+    background-color: #ebebeb;
+    color: #791010;
+}
+
+
+#game-title
+{
+    text-align: center;
+    font-size: 7.5em;
+    margin: 30px;
+    color: black;
+    -webkit-text-fill-color: silver;
+    -webkit-text-stroke: 3px black;
+
+    font-weight: 400;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.51);
+    font-family: "Old English Text MT";
+}
+
+#player-number{
+    position: absolute;
+    top: 1.5em;
+    right: 0;
+    text-align-last: center;
+    font-size: 1.5em;
+    font-family: "Old English Text M";
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}

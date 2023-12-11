@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DinoPower</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js" integrity="sha512-1QvjE7BtotQjkq8PxLeF6P46gEpBRXuskzIVgjFpekzFVF4yjRgrQvTG1MTOJ3yQgvTteKAcO7DSZI92+u/yZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js" integrity="sha512-iKDtgDyTHjAitUDdLljGhenhPwrbBfqTKWO1mkhSFH3A7blITC9MhYon6SjnMhp4o0rADGw9yAC6EW4t5a4K3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+                integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="css/landscape.css">
+        <link rel="stylesheet" href="css/board.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/obstacles.css">
+        <link rel="stylesheet" href="css/score.css">
+        <link rel="stylesheet" href="css/users-bar.css">
+        <link rel="stylesheet" href="css/gameOver.css">
+        <link rel="icon" type="image/png" href="/static/game/img/walking_titan_1.png">
+
+    </head>
+
+    <body onload="app.init()">
+        
+    <div id="contentLandscape">
+        <p id="game-title">DinoPower</p>
+        
+        <div id="player-number-points">
+            <p id="player-number"></p>
+            <p id="player-points"></p>
+        </div>
+
+        
+        <div id="board" class = "invisible">
+            <div id="player" class="titan-running"></div>
+            <div id="bird" class="bird-movement"></div>
+            <div id="cactus1" class="cactus cactus-movement"></div>
+            <div id="cactus2" class="cactus cactus-movement"></div>
+            <div id="cactus3" class="cactus cactus-movement"></div>
+            <div id="cactus4" class="cactus cactus-movement"></div>
+            <div id="cactus5" class="cactus cactus-movement"></div>
+            <div id="cactus6" class="cactus cactus-movement"></div>
+        </div>
+
+        <button id="UpdatePlayers" class="buttonNew">Iniciar Carrera</button>
+
+        <div id="powers-container">
+
+            <button id="power" class="invisible"></button>
+        </div>
+
+
+        <div id="other-players">
+            <span id="ground"></span>
+        </div>
+
+    </div>
+        
+        <script src="js/environment.js"></script>
+        <script src="js/sockets/socketSetUp.js"></script>
+        <script src="js/player/titan.js"></script>
+        <script src="js/player/playerClient.js"></script>
+        <script src="js/collision/score.js"></script>
+        <script src="js/player/player.js"></script>
+        <script src="js/room/roomClient.js"></script>
+        <script src="js/room/room.js"></script>
+        <script src="js/usersBar/userBar.js"></script>
+        <script src="js/backgroundAndEnemies/board.js"></script>
+        <script src="js/collision/dead.js"></script>
+        <script src="js/collision/collision.js"></script>
+        <script src="js/powers/powers.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>
