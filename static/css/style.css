@@ -1,6 +1,6 @@
 *
 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif, "Old English Text MT";
 }
 
 body
@@ -37,7 +37,6 @@ body
 
     font-weight: 400;
     text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.51);
-    font-family: "Old English Text MT";
 }
 
 .button-join{
